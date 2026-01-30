@@ -67,8 +67,8 @@ interface TestimonialsSectionProps {
   locale: "en" | "vi"
 }
 
-export function TestimonialsSection({ locale }: TestimonialsSectionProps) {
-  const t = content[locale]
+export function TestimonialsSection({ locale = "vi" }: TestimonialsSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section id="testimonials" className="py-20 lg:py-28 bg-muted/30">

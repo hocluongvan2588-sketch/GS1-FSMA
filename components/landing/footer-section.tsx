@@ -95,8 +95,8 @@ interface FooterSectionProps {
   locale: "en" | "vi"
 }
 
-export function FooterSection({ locale }: FooterSectionProps) {
-  const t = content[locale]
+export function FooterSection({ locale = "vi" }: FooterSectionProps) {
+  const t = content[locale] || content.vi
   const currentYear = new Date().getFullYear()
 
   return (

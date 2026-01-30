@@ -41,8 +41,8 @@ interface HeroSectionProps {
   onGetStarted: () => void
 }
 
-export function HeroSection({ locale, onGetStarted }: HeroSectionProps) {
-  const t = content[locale]
+export function HeroSection({ locale = "vi", onGetStarted }: HeroSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
@@ -122,9 +122,9 @@ export function HeroSection({ locale, onGetStarted }: HeroSectionProps) {
                   {/* Stats Row */}
                   <div className="grid grid-cols-3 gap-3">
                     {[
-                      { label: locale === "vi" ? "Lô hoạt động" : "Active Batches", value: "1,247" },
-                      { label: locale === "vi" ? "Sự kiện hôm nay" : "Events Today", value: "3,891" },
-                      { label: locale === "vi" ? "Tỷ lệ tuân thủ" : "Compliance", value: "99.2%" },
+                      { label: locale === "vi" ? "Lo hoat dong" : "Active Batches", value: "1,247" },
+                      { label: locale === "vi" ? "Su kien hom nay" : "Events Today", value: "3,891" },
+                      { label: locale === "vi" ? "Ty le tuan thu" : "Compliance", value: "99.2%" },
                     ].map((stat, i) => (
                       <div key={i} className="bg-muted/30 rounded-lg p-3">
                         <div className="text-xs text-muted-foreground mb-1">{stat.label}</div>
@@ -170,7 +170,7 @@ export function HeroSection({ locale, onGetStarted }: HeroSectionProps) {
 
               {/* Floating Badge */}
               <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                {locale === "vi" ? "Thời gian thực" : "Real-time"}
+                {locale === "vi" ? "Thoi gian thuc" : "Real-time"}
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ interface LandingHeaderProps {
 }
 
 export function LandingHeader({ 
-  locale, 
+  locale = "vi", 
   onLocaleChange, 
   isAuthenticated,
   onGetStarted,
@@ -57,7 +57,7 @@ export function LandingHeader({
 }: LandingHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const t = content[locale]
+  const t = content[locale] || content.vi
 
   useEffect(() => {
     const handleScroll = () => {

@@ -105,8 +105,8 @@ interface ComplianceSectionProps {
   locale: "en" | "vi"
 }
 
-export function ComplianceSection({ locale }: ComplianceSectionProps) {
-  const t = content[locale]
+export function ComplianceSection({ locale = "vi" }: ComplianceSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section id="compliance" className="py-20 lg:py-28 bg-muted/30">

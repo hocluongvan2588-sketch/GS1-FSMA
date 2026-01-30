@@ -27,8 +27,8 @@ interface StatsSectionProps {
   locale: "en" | "vi"
 }
 
-export function StatsSection({ locale }: StatsSectionProps) {
-  const t = content[locale]
+export function StatsSection({ locale = "vi" }: StatsSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section className="py-16 lg:py-20 bg-muted/30">

@@ -43,8 +43,8 @@ interface CTASectionProps {
   onGetStarted: () => void
 }
 
-export function CTASection({ locale, onGetStarted }: CTASectionProps) {
-  const t = content[locale]
+export function CTASection({ locale = "vi", onGetStarted }: CTASectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section className="py-20 lg:py-28">

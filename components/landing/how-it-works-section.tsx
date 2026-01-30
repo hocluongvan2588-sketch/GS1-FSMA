@@ -71,8 +71,8 @@ interface HowItWorksSectionProps {
   locale: "en" | "vi"
 }
 
-export function HowItWorksSection({ locale }: HowItWorksSectionProps) {
-  const t = content[locale]
+export function HowItWorksSection({ locale = "vi" }: HowItWorksSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section id="how-it-works" className="py-20 lg:py-28">

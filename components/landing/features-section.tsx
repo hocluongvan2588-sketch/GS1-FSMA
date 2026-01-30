@@ -143,8 +143,8 @@ interface FeaturesSectionProps {
   locale: "en" | "vi"
 }
 
-export function FeaturesSection({ locale }: FeaturesSectionProps) {
-  const t = content[locale]
+export function FeaturesSection({ locale = "vi" }: FeaturesSectionProps) {
+  const t = content[locale] || content.vi
 
   return (
     <section id="features" className="py-20 lg:py-28">
